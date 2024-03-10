@@ -1,0 +1,141 @@
+:root{
+	--color1: #070F2B;
+	--color2: #1B1A55;
+	--color3: #535C91;
+    --color4: #9290C3;
+    --color5: #ffffff;
+}
+
+body{
+    background-color: var(--color4);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color1);
+    height: 70px;
+}
+.container-todolist{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-todolist .no-task-svg{
+    width: 300px;
+    height: fit-content;
+}
+.container-todolist h4.no-task{
+    color: var(--color2);
+}
+.card{
+    width: 100%;
+}
+.card .label-task-title{
+    font-family: "Poppins", sans-serif;
+}
+.dropdown-menu span:first-child{
+    background-color: var(--color3);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 0 4px;
+}
+.dropdown-menu span:last-child{
+    background-color: red;
+    display: inline-block;
+    border-radius: 8px;
+}
+/* navbar menu humberger */
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.account{
+    color: var(--color5);
+    font-size: 20px;
+    font-family: "Pacifico", cursive;
+}
+/* label checkbox */
+input[type= checkbox] + .label-check-task{
+    color: rgb(208, 208, 208);
+    border-color: var(--color2);
+}
+input[type= checkbox]:hover + .label-check-task:hover{
+    border-color: var(--color2);
+    color: rgb(208, 208, 208);
+
+}
+input[type= checkbox]:checked + .label-check-task{
+    background-color: var(--color2);
+    color: var(--color5);
+    border-color: var(--color2);
+}
+input[type= checkbox]:checked:hover + .label-check-task:hover{
+    color: var(--color5);
+}
+/* modal btn input */
+.modal .new-task,
+.modal .button-edit-task,
+.button-get-user-name{
+    border-color: var(--color3);
+    color: var(--color2);
+}
+.modal .new-task:hover,
+.modal .button-edit-task:hover,
+.button-get-user-name:hover{
+    background-color: var(--color3);
+    color: var(--color5);
+}
+/* input-name */
+.input-name{
+    display: flex;
+    pointer-events: inherit;
+}
+/* menu slide */
+.offcanvas-body span{
+    cursor: pointer;
+}
+.offcanvas-body span:hover{
+    background-color: darkgray;
+}
+.offcanvas-body a{
+    text-decoration: none;
+    color: inherit;
+}
+.offcanvas-body a:hover{
+    background-color: darkgray;
+    text-decoration: underline;
+    color: royalblue;
+}
+/* container alert */
+.container-alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+/* get user name */
+.get-user-name{
+    display: flex;
+    justify-content: center;
+}
+.card-input-name{
+    width: 50vw;
+    position: absolute;
+    z-index: 9999999999999;
+}
+
+@media (max-width: 900px){
+    .card-input-name{
+        width: 80vw;
+    }
+}
+@media (max-width: 500px){
+    .account{
+        font-size: 18px;
+    }
+    .card-input-name{
+        width: 90vw;
+    }
+}

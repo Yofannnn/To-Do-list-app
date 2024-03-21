@@ -23,7 +23,7 @@ body{
     align-items: center;
 }
 .container-todolist .no-task-svg{
-    width: 300px;
+    width: 310px;
     height: fit-content;
 }
 .container-todolist h4.no-task{
@@ -109,11 +109,9 @@ input[type= checkbox]:checked:hover + .label-check-task:hover{
 }
 /* container alert */
 .container-alert{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
-    top: 0;
+    top: 15%;
+    left: 25vw;
 }
 /* get user name */
 .get-user-name{
@@ -125,9 +123,22 @@ input[type= checkbox]:checked:hover + .label-check-task:hover{
     position: absolute;
     z-index: 9999999999999;
 }
+/* alert when deadline*/
+.alertBodyTaskOver{
+    width: 50vw;
+    z-index: 9999999999999;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.35);
+}
+.alertBodyTaskOver .card-body h6{
+    color: red;
+}
 
 @media (max-width: 900px){
-    .card-input-name{
+    .container-alert{
+        left: 10vw;
+    }
+    .card-input-name,
+    .alertBodyTaskOver{
         width: 80vw;
     }
 }

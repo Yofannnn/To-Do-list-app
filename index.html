@@ -30,6 +30,15 @@
                       <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
                       </svg>New Task
                     </span>
+                    <span class="p-3 rounded-4 d-flex gap-2 align-items-center">
+                      <label for="sort" class="text-nowrap">Sort By</label>
+                      <select class="form-select" id="sort">
+                        <option value="adding-time">Adding Time</option>
+                        <option value="adding-time-reverse">Adding Time 'reverse'</option>
+                        <option value="deadline-time">Deadline Time</option>
+                        <option value="deadline-time-reverse">Deadline Time 'reverse'</option>
+                      </select>
+                    </span>
                     <span class="confirm-dat p-3 rounded-4" data-bs-toggle="modal" data-bs-target="#deleteAllTasks">Clear All Task</span>
                     <span class="confirm-dun p-3 rounded-4" data-bs-toggle="modal" data-bs-target="#deleteUserName">Delete User Name</span>
                     <a href="https://yofannnn.github.io/" target="_blank" class="p-3 rounded-4">©Yofan</a>
@@ -80,14 +89,6 @@
           </div>
         </div>
       </div>
-
-      <!-- btn to add new task -->
-      <button type="button" class="btn position-fixed bottom-0 end-0 mb-5 me-5" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="inputNewTask()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-        </svg>
-      </button>
 
       <!-- input name -->
       <div class="input-name"></div>
